@@ -1,0 +1,5 @@
+steps:
+    - label: ":github: Open Pull Request"
+      plugins:
+        - envato/github-pull-request#v0.4.0:
+            title: "Merge upstream"
