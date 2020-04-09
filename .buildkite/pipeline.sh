@@ -6,3 +6,6 @@ set -eu
 if [ ! -z "$(git diff --name-only upstream/master master)" ]; then
     cat .buildkite/upstream.yml
 fi
+    echo "steps:"
+    echo "  - command: exit 0"
+end
