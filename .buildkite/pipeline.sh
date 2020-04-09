@@ -5,7 +5,7 @@ set -eu
 
 BRANCH=$(git rev-parse --abbrev-ref HEAD)
 
-if [ "$BRANCH" != "master" ] && [ ! -z "$(git diff --name-only upstream/master)" ]; then
+if [ "$BRANCH" == "master" ] && [ ! -z "$(git diff --name-only upstream/master)" ]; then
     git remote add upstream https://github.com/jsforce/jsforce.git || true
     git fetch upstream
     cat .buildkite/upstream.yml
