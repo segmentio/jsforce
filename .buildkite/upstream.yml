@@ -3,3 +3,5 @@ steps:
       plugins:
         - envato/github-pull-request#v0.4.0:
             title: "Merge upstream"
+            head: "jsforce:master"
+            base: "segmentio:master"
